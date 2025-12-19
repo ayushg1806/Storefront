@@ -5,7 +5,6 @@ ENV PYTHONUNBUFFERED=1
 
 WORKDIR /app
 
-# System dependencies for MySQL
 RUN apt-get update \
     && apt-get install -y gcc default-libmysqlclient-dev \
     && apt-get clean
