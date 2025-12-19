@@ -20,6 +20,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
+ENV DJANGO_SETTINGS_MODULE=storefront.settings.prod
 RUN python manage.py collectstatic --noinput
 
 CMD ["gunicorn", "storefront.wsgi:application", "--bind", "0.0.0.0:8000"]
