@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Storefront</title>
+  <link rel="stylesheet" href="{% static 'core/styles.css' %}">
+</head>
+<body>
+
+  <header>
+    <h1>Storefront</h1>
+    <nav>
+      <a href="/auth/jwt/create/">Login</a>
+      <a href="/store/collections/">Collections</a>
+      <a href="/store/products/">Products</a>
+      <a href="/store/carts/">Cart</a>
+      <a href="/admin/">Admin</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Welcome to Storefront</h2>
+      <p>
+        A simple e-commerce API client built while learning Django REST Framework.
+      </p>
+      <a href="/store/products/" class="btn-primary">View Products</a>
+    </section>
+
+    <!-- Optional image usage -->
+    <!-- <section class="hero-image">
+      <img src="{% static 'core/home-page.png' %}" alt="Storefront Home">
+    </section> -->
+
+    <section class="info">
+      <div>
+        <h3>Products</h3>
+        <p>Browse available products and their details.</p>
+      </div>
+
+      <div>
+        <h3>Admin</h3>
+        <p>Manage products, collections, and users.</p>
+      </div>
+
+      <div>
+        <h3>API Driven</h3>
+        <p>Built with Django REST Framework and JWT authentication.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Storefront</p>
+  </footer>
+
+</body>
+</html>
