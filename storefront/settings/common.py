@@ -34,7 +34,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'djoser',
     'templated_mail',
-    'silk',
     'playground',
     'store',
     'tags',
@@ -53,9 +52,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
-# if DEBUG:
-#     MIDDLEWARE += ['silk.middleware.SilkyMiddleware']
 
 INTERNAL_IPS = [
     '127.0.0.1',

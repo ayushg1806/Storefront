@@ -4,12 +4,16 @@ DEBUG = True
 
 INSTALLED_APPS += [
     "debug_toolbar",
+    'silk',
 ]
 
 MIDDLEWARE.insert(
     0,
     "debug_toolbar.middleware.DebugToolbarMiddleware"
 )
+
+# if DEBUG:
+#     MIDDLEWARE += ['silk.middleware.SilkyMiddleware']
 
 SECRET_KEY = 'django-insecure-cxr7vdzbenz^$2a7amfd42ghl$kpjiz_xib!tf6e-&ss1^umh#'
 
