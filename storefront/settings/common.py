@@ -32,7 +32,6 @@ INSTALLED_APPS = [
     'django_filters',
     'corsheaders',
     'rest_framework',
-    'debug_toolbar',
     'djoser',
     'templated_mail',
     'silk',
@@ -45,7 +44,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

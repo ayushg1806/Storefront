@@ -2,6 +2,15 @@ from .common import *
 
 DEBUG = True
 
+INSTALLED_APPS += [
+    "debug_toolbar",
+]
+
+MIDDLEWARE.insert(
+    0,
+    "debug_toolbar.middleware.DebugToolbarMiddleware"
+)
+
 SECRET_KEY = 'django-insecure-cxr7vdzbenz^$2a7amfd42ghl$kpjiz_xib!tf6e-&ss1^umh#'
 
 STATIC_URL = 'static/'
