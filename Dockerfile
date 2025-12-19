@@ -23,4 +23,4 @@ COPY . .
 ENV DJANGO_SETTINGS_MODULE=storefront.settings.prod
 RUN python manage.py collectstatic --noinput
 
-CMD ["gunicorn", "storefront.wsgi:application", "--bind", "0.0.0.0:8000"]
+CMD ["sh", "-c", "python manage.py migrate && python manage.py createsuperuser --noinput || true && gunicorn storefront.wsgi:application --bind 0.0.0.0:8000"]
