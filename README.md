@@ -266,4 +266,13 @@ docker run -p 8000:8000 storefront
 - Dockerized backend  
 - PostgreSQL hosted on Supabase  
 - Deployed on Render  
-- Database migrations run automatically at startup  
+- Database migrations run automatically at startup
+
+## To run this locally:
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
+```
